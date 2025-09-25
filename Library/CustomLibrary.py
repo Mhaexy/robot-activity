@@ -18,8 +18,6 @@ class CustomLibrary:
            user["address"]["stateAbbr"] = user["address"]["street"][0:2].upper()
        return users
 
-
-   # === AUGMENTED USERS (for Test 2) ===
    def get_last_five_users(self):
        return self._fetch_users_slice(5, 10)
 
@@ -71,10 +69,8 @@ class CustomLibrary:
        return augmented_users
 
 
-   # === Helpers ===
    def get_random_birthday(self):
        return str(random.randint(1,12)).zfill(2) + str(random.randint(1,28)).zfill(2) + str(random.randint(1999,2006)).zfill(4)
-
 
    def generate_password(self, length=8):
        if length < 4:
@@ -91,13 +87,4 @@ class CustomLibrary:
        return ''.join(password)
 
 
-   def handle_name_prefixes(self, full_name):
-       prefixes = ["Mr.", "Mrs.", "Ms.", "Dr."]
-       name_parts = full_name.split(" ")
-       if name_parts[0] in prefixes:
-           first_name = name_parts[1]
-           last_name = " ".join(name_parts[2:])
-       else:
-           first_name = name_parts[0]
-           last_name = " ".join(name_parts[1:])
-       return first_name, last_name
+   
