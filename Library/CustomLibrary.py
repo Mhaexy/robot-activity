@@ -86,5 +86,15 @@ class CustomLibrary:
        random.shuffle(password)
        return ''.join(password)
 
+    def handle_name_prefixes(self, full_name):
+       prefixes = ["Mr.", "Mrs.", "Ms.", "Dr."]
+       name_parts = full_name.split(" ")
+       if name_parts[0] in prefixes:
+           first_name = name_parts[1]
+           last_name = " ".join(name_parts[2:])
+       else:
+           first_name = name_parts[0]
+           last_name = " ".join(name_parts[1:])
+       return first_name, last_name
 
    
