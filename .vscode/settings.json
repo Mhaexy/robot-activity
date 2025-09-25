@@ -1,0 +1,6 @@
+{
+    "robot.pythonpath": [
+        "${workspaceFolder}/rfenv/lib/python3.12/site-packages"
+    ],
+    "python-envs.pythonProjects": []
+}
